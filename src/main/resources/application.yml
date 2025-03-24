@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: backend
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+              client-id: CLIENT_SPRING
+              client-secret: DfDtt5VMAL4gqQzTiiKRNiJreDTpET1n
+              authorization-grant-type: authorization_code
+              scope: openid
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8080/auth/realms/SPRING_REAL_API
+            user-name-attribute: preferred_username
+
+
+
+server:
+  port: 8081
+
