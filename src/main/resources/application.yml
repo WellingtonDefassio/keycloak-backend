@@ -12,9 +12,22 @@ spring:
               scope: openid
         provider:
           keycloak:
-            issuer-uri: http://localhost:8080/auth/realms/SPRING_REAL_API
+            issuer-uri: http://localhost:8080/realms/SPRING_REAL_API
             user-name-attribute: preferred_username
 
+keycloak:
+  auth-server:
+    url: http://localhost:8080/realms/SPRING_REAL_API
+    realm: SPRING_REAL_API
+    resource: CLIENT_SPRING
+    secret: DfDtt5VMAL4gqQzTiiKRNiJreDTpET1n
+    grant_type: password
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
 
 
 server:
